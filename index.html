@@ -20,8 +20,18 @@
   </style>
 </head>
 <body>
-  <video controls autoplay>
-    <source src="video.mp4" type="video/mp4">
+    <video controls autoplay>
+      <video width="100%" controls>
+    <!-- MP4 format for most modern browsers -->
+    <source src="path/to/your-video.mp4" type="video/mp4">
+  
+    <!-- WebM format for browsers like Firefox, Opera, and Chrome that prefer WebM -->
+    <source src="path/to/your-video.webm" type="video/webm">
+  
+    <!-- Ogg format for older browsers (very rare to need this now) -->
+    <source src="path/to/your-video.ogv" type="video/ogg">
+  
+    <!-- Fallback message for browsers that do not support the <video> tag -->
     Your browser does not support the video tag.
   </video>
 </body>
